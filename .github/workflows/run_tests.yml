@@ -1,1 +1,17 @@
+name: Run autotests
 
+
+on: 
+   workflow_dispatch:
+      inputs:
+        deployment_target:
+        discription: select test to run
+        required: true
+        type: choise
+        default: all
+        options:
+           - all
+
+
+jobs:
+  run_tests:
